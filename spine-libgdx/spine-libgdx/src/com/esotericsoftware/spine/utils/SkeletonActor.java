@@ -64,8 +64,7 @@ public class SkeletonActor extends Actor {
 		Color color = skeleton.getColor();
 		float oldAlpha = color.a;
 		skeleton.getColor().a *= parentAlpha;
-
-		skeleton.setPosition(getX(), getY());
+		skeleton.setPosition(getX() + getOriginX(), getY() + getOriginY());
 		renderer.draw(batch, skeleton);
 
 		color.a = oldAlpha;
